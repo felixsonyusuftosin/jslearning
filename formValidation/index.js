@@ -9,6 +9,12 @@ form.addEventListener("click", submitForm);
 firstName.addEventListener("blur", checkFirst);
 lastName.addEventListener("click", checkLast);
 emailAdd.addEventListener("click", checkEmail);
+
+
+// TASK - We will create a login page, with login form 
+// we will set up a server to handle the login 
+// we will communicate with the server when the validation passes 
+
 // FUNCTION
 function submitForm(e) {
   console.log(firstName.value.length);
