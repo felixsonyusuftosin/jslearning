@@ -1,4 +1,7 @@
 const app = require('express')()
+const cors = require('cors')
+
+app.use(cors())
 
 app.post('/user', (req, res) => {
   const body = req.body

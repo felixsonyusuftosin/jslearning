@@ -1,3 +1,6 @@
+
+
+
 window.onload = () => {
   const form = document.getElementById('form')
   const firstName = document.getElementById('fname')
@@ -5,6 +8,10 @@ window.onload = () => {
   const email = document.getElementById('email')
   const password = document.getElementById('password')
   const submit = document.getElementById('submit')
+
+  form.addEventListener('submit', (e)=> {
+      e.preventDefault()
+  })
 
  function checkIfFormIsValid(e) {
     const element = e.target
@@ -47,7 +54,15 @@ window.onload = () => {
   submit.addEventListener('click', e => {
     const formIsValid = form.checkValidity()
     if(formIsValid) { 
-       alert(' form is valid')
+      const elements = form.elements
+      const url = 'http://localhost:9898'
+
+      const loadData = async function (data) {
+        const response = await axios({ url: `${url}/user`, body: data, method: 'post' })
+        console.log(response)
+        alert('data loaded')
+      }
+      loadData(elements)
     }
  
   })
