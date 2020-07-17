@@ -1,2 +1,4 @@
 **node_modules
 **.vscode
+app/client/node_modules/*
+app/server/node_modules/*
