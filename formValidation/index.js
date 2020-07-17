@@ -36,11 +36,11 @@ const checkFormValidity = e => {
 // window is ready
 window.onload = () => {
   // SELECTORS
-  const form = document.getElementById('register')
-  const firstName = document.getElementById('first_name')
-  const lastName = document.getElementById('last_name')
-  const emailAdd = document.getElementById('email')
-  const errorElement = document.getElementsByClassName('error')
+  // const form = document.getElementById('register')
+  // const firstName = document.getElementById('first_name')
+  // const lastName = document.getElementById('last_name')
+  // const emailAdd = document.getElementById('email')
+  // const errorElement = document.getElementsByClassName('error')
 
   // EVENT LISTENERS
   form.addEventListener('submit', submitForm)

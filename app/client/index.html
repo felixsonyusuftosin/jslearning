@@ -11,26 +11,26 @@
 <body>
 
 
-    <form action="/" id="form" class="form">
+    <form id="form" class="form">
         <div class="container">
             <section>
                 <label for="fname">First Name:</label>
-                <input type="text" id="fname" name="first_name">
+                <input required type="text" id="fname" name="first_name">
             </section>
             <section>
                 <label for="lname">Last Name:</label>
-                <input type="text" id="lname" name="last_name">
+                <input required type="text" id="lname" name="last_name">
             </section>
             <section>
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
+                <input  required type="email" id="email" name="email">
             </section>
             <section>
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password">
+                <input required type="password" id="password" name="password">
             </section>
             <section>
-                <button type="submit">Submit</button>
+                <button id="submit" >Submit</button>
             </section>
         </div>
     </form>
