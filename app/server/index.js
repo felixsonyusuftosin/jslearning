@@ -1,7 +1,6 @@
 const app = require('express')()
 
 app.post('/user', (req, res) => {
-  console.log(req)
   const body = req.body
   res.send(body)
 })
