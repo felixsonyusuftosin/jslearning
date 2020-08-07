@@ -56,13 +56,17 @@ window.onload = () => {
     if(formIsValid) { 
       const elements = form.elements
       const url = 'http://localhost:9898'
-
+      axios.defaults.headers.post['Content-Type'] = 'application/json'
       const loadData = async function (data) {
-        const response = await axios({ url: `${url}/user`, body: data, method: 'post' })
+        console.log(data, ' data from client')
+        const response = await axios({ url: `${url}/user`, data, method: 'post' })
+        document.getElementById('form').reset() 
         console.log(response)
         alert('data loaded')
       }
-      loadData(elements)
+      const formValues = new window.FormData(document.getElementById('form'))
+      const entries = Object.fromEntries(formValues)
+      loadData(entries)
     }
  
   })
